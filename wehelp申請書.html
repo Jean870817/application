@@ -1,75 +1,137 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatibal" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>申請書</title>
-</head>
-<body>
-<h1><font color="blue">自傳-那些關於我的小事</font></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatibal" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>申請書</title>
+    <style>
+      h1 {
+        background-color: lightblue;
+      }
+      h2 {
+        background-color: lightyellow;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      function toggleContent(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none") {
+          element.style.display = "block";
+        } else {
+          element.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 onclick="toggleContent('intro')">
+      <font color="blue">自傳-那些關於我的小事</font>
+    </h1>
 
-<p>我是張淯淨，今年25歲，畢業於國防大學新聞系碩士班，
-<strong>在研究所期間有接觸過一些關於資料分析的部分</strong>，
-並在學習期間<strong>嘗試自學跨領域的學習資料科學，並協助教授完成科技部研究計畫中數據分析的範疇</strong>，
-另外畢業論文則是主攻<strong>文字探勘，嘗試用資料分析技巧結合原本傳播專業</strong>。
-曾經也有自學過python及前端html，不過卻赫然發現越學習卻加迷惘，似乎無法系統性的說明自己學習的歷程為何。
-目前雖在職中，不過工作屬性偏自由也沒有必須達成的KPI，因此下班後有十分充裕的彈性時間可以參與此計畫。
-</p>
+    <p id="intro">
+      我是張淯淨，今年25歲，畢業於國防大學新聞系碩士班，
+      <strong>在研究所期間有接觸過一些關於資料分析的部分</strong>，
+      並在學習期間<strong>嘗試自學跨領域的學習資料科學，並協助教授完成科技部研究計畫中數據分析的範疇</strong>，
+      另外畢業論文則是主攻<strong>文字探勘，嘗試用資料分析技巧結合原本傳播專業</strong>。
+      曾經也有自學過python及前端html，不過卻赫然發現越學習卻加迷惘，似乎無法系統性的說明自己學習的歷程為何。
+      目前雖在職中，不過工作屬性偏自由也沒有必須達成的KPI，因此下班後有十分充裕的彈性時間可以參與此計畫。
+    </p>
 
+    <hr />
 
-<hr/>
+    <h2 onclick="toggleContent('effort')">
+      <font color="purple">為了成為軟體工程師所做的努力</font>
+    </h2>
+    <p id="effort" class="hidden">
+      研究所即將畢業期間，因為希望能進攻軟體工程師的領域，故
+      <strong>短暫學習過Python及如何架設前端網站</strong>
+      ，可惜的是由於斷斷續續的學習加上無系統化的流程與方法，因此無留下相關作品集，
+      只有畢業的碩論有資料科學的痕跡，也導致之後在軟體工程師領域求職困難的結果。
+    </p>
 
-<h2><font color="purple">為了成為軟體工程師所做的努力</font></h2>
-<p>研究所即將畢業期間，因為希望能進攻軟體工程師的領域，故
-<strong>短暫學習過Python及如何架設前端網站</strong>
-，可惜的是由於斷斷續續的學習加上無系統化的流程與方法，因此無留下相關作品集，
-只有畢業的碩論有資料科學的痕跡，也導致之後在軟體工程師領域求職困難的結果。</p>
+    <h2 onclick="toggleContent('schedule')">
+      <font color="purple">如何安排之後的學習時間</font>
+    </h2>
+    <p id="schedule" class="hidden">
+      目前在職工作為8:00左右上班到17:00下班，並且基本上無加班制度且工作量並不繁瑣，
+      因此在上班時間仍有彈性空間<strong>約莫4小時可留於程式的學習上</strong>，
+      另外<strong>下班後的晚間19:00-23:00</strong>也可安排學習時間
+    </p>
 
-<h2><font color="purple">如何安排之後的學習時間</font></h2>
-<p>目前在職工作為8:00左右上班到17:00下班，並且基本上無加班制度且工作量並不繁瑣，
-因此在上班時間仍有彈性空間<strong>約莫4小時可留於程式的學習上</strong>，
-另外<strong>下班後的晚間19:00-23:00</strong>也可安排學習時間</p>
+    <h2 onclick="toggleContent('company')">
+      <font color="purple">是否有想要加入的公司？為什麼想加入該公司？</font>
+    </h2>
+    <p id="company" class="hidden">
+      玩美移動AI/AR美妝科技；因為本身的興趣為研究美妝時尚產業相關趨勢，
+      希望能學習前後端的知識，投入美妝產業服務，若能結合自身興趣及未來科技趨勢，
+      相信在職涯的發展能夠走的更加長久。
+      <a
+        href="https://www.yourator.co/companies/PERFECTcorp?gad_source=1&gclid=CjwKCAiA0bWvBhBjEiwAtEsoWxG89m3sLHuZUI022ylmzcytr93t9bRmICxBTse7-oLN8tucKsYCkBoCGMoQAvD_BwE"
+        >玩美移動徵才網連結</a
+      >
+    </p>
 
-<h2><font color="purple">是否有想要加入的公司？為什麼想加入該公司？</font></h2>
-<p>玩美移動AI/AR美妝科技；因為本身的興趣為研究美妝時尚產業相關趨勢，
-希望能學習前後端的知識，投入美妝產業服務，若能結合自身興趣及未來科技趨勢，
-相信在職涯的發展能夠走的更加長久。</p>
+    <h2 onclick="toggleContent('emotion')">
+      <font color="purple"
+        >請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</font
+      >
+    </h2>
+    <p id="emotion" class="hidden">
+      本職為學校的計畫助理，工作範疇包含<strong
+        >部門的Youtube媒體宣傳，
+        以及座談會的會後新聞稿和歷史資料數位化，</strong
+      >
+      然而在某一次的座談會後撰寫出新聞稿卻被主管批評得一文不值，抓不到重點、
+      加上當期youtube剛上片的點閱率不如預期以及數位化資料竟然遭有心人士竊取，
+      當天產生出明顯的負面情緒，並且也開始自我懷疑是否能力不夠、抗壓力不足等。
+      回到家中為了平復自己的心境，<strong>我選擇做瑜珈以及冥想。</strong>
+      意外的是，我並沒有如往常碰到負面情緒時必然的失眠，而是獲得一夜好眠，且隔天更有信心面臨新的挑戰。
+      因此我養成了無論再忙碌，每日睡前仍會撥空做20分鐘的冥想練習，
+      更相信這會讓我的身心更趨於平衡。
+    </p>
 
-<a href="https://www.yourator.co/companies/PERFECTcorp?gad_source=1&gclid=CjwKCAiA0bWvBhBjEiwAtEsoWxG89m3sLHuZUI022ylmzcytr93t9bRmICxBTse7-oLN8tucKsYCkBoCGMoQAvD_BwE">玩美移動徵才網連結</a>
+    <h2 onclick="toggleContent('idea')">
+      <font color="purple">關於這份申請網頁，分享一個開發時的技術心得。</font>
+    </h2>
+    <p id="idea" class="hidden">
+      之前都是直接在VS上寫code給自己看沒有太大的感覺，這
+      次是要藉由github來呈現時才有種<strong>「這次是玩真的」</strong>的感覺，
+      網路上看教學跟自己腦海中構思再到實作上真的不一樣，
+      雖然有時會忘記要打結尾的、或是犯一些簡單的小錯誤，不過卻從中更加了解到寫程式就是一個不斷試錯、
+      犯錯，並且找到答案的一個過程，
+      <strong
+        >也更加深了未來想要走軟體工程師的這條路，
+        <font color="red"
+          >「或許用的是笨方法，不過只要親身去試，不要怕犯錯，你永遠不知道自己能走多遠」</font
+        >， </strong
+      >我想這就是這份簡單申請網頁的心得了吧!
+    </p>
 
-<h2><font color="purple">請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</font></h2>
-<p>本職為學校的計畫助理，工作範疇包含<strong>部門的Youtube媒體宣傳，
-以及座談會的會後新聞稿和歷史資料數位化，</strong>
-然而在某一次的座談會後撰寫出新聞稿卻被主管批評得一文不值，抓不到重點、
-加上當期youtube剛上片的點閱率不如預期以及數位化資料竟然遭有心人士竊取，
-當天產生出明顯的負面情緒，並且也開始自我懷疑是否能力不夠、抗壓力不足等。
-回到家中為了平復自己的心境，<strong>我選擇做瑜珈以及冥想。</strong>
-意外的是，我並沒有如往常碰到負面情緒時必然的失眠，而是獲得一夜好眠，且隔天更有信心面臨新的挑戰。
-因此我養成了無論再忙碌，每日睡前仍會撥空做20分鐘的冥想練習，
-更相信這會讓我的身心更趨於平衡。</p>
+    <h2 onclick="toggleContent('relationship')">
+      <font color="purple"
+        >請用簡短兩三句話，描述對你而言，最重要的一項人際交往原則。</font
+      >
+    </h2>
+    <p id="relationship" class="hidden">
+      我認為理解及<strong>有善的溝通是最重要的人際交往原則</strong>。
+      努力理解對方的處境和背景，並適時提供自己的看法有助於建立良好的互動關係，
+      除了可避免誤解外，更可促進雙方和諧共處。
+    </p>
 
-<h2><font color="purple">關於這份申請網頁，分享一個開發時的技術心得。</font></h2>
-<p>之前都是直接在VS上寫code給自己看沒有太大的感覺，這
-次是要藉由github來呈現時才有種<strong>「這次是玩真的」</strong>的感覺，
-網路上看教學跟自己腦海中構思再到實作上真的不一樣，
-雖然有時會忘記要打結尾的</>、或是犯一些簡單的小錯誤，不過卻從中更加了解到寫程式就是一個不斷試錯、
-犯錯，並且找到答案的一個過程，
-<strong>也更加深了未來想要走軟體工程師的這條路，
-<font color="red">「親身去試，不要怕犯錯，你永遠不知道自己能走多遠」</font>，
-</strong>我想這就是這份簡單申請網頁的心得了吧!</p>
-
-<h2><font color="purple">請用簡短兩三句話，描述對你而言，最重要的一項人際交往原則。</font></h2>
-<p>我認為理解及<strong>有善的溝通是最重要的人際交往原則</strong>。
-努力理解對方的處境和背景，並適時提供自己的看法有助於建立良好的互動關係，
-除了可避免誤解外，更可促進雙方和諧共處。</p>
-
-<h2><font color="purple">其他想說的話</font></h2>
-<p>一年前我選擇相信自己，一邊摸索一邊自學程式語法，卻越發迷惘且如同走入死胡同，
-原先自信滿滿可在畢業前呈現一個完整的作品集，不過事實證明我失敗了，
-於是我開始欺騙且安慰自己或許是本身資質不足，天分不夠。
-而後意外地在網路上滑到wehelp，重新考慮到本身在職且時間有限的情況下，
-這次我毅然決然選擇相信團隊，希望能藉由有系統化的學習以及團隊互相鼓舞鞭策的力量，
-帶我走出死胡同，在軟體的領域找到屬於自己的天地。</p>
-</body>
+    <h2 onclick="toggleContent('other')">
+      <font color="purple">其他想說的話</font>
+    </h2>
+    <p id="other" class="hidden">
+      一年前我選擇相信自己，一邊摸索一邊自學程式語法，卻越發迷惘且如同走入死胡同，
+      原先自信滿滿可在畢業前呈現一個完整的作品集，不過事實證明我失敗了，
+      於是我開始欺騙且安慰自己或許是本身資質不足，天分不夠。
+      而後意外地在網路上滑到wehelp，重新考慮到本身在職且時間有限的情況下，
+      這次我毅然決然選擇相信團隊，希望能藉由有系統化的學習以及團隊互相鼓舞鞭策的力量，
+      帶我走出死胡同，在軟體的領域找到屬於自己的天地。
+    </p>
+  </body>
 </html>
